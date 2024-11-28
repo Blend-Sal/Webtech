@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="scaffolded-by" content="https://github.com/google/stagehand">
+    <title>Bridgebuilder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script defer src="{{ url_for('static', filename='main.dart.js') }}"></script>
+</head>
+<body>
+<header>
+    <h1>Bridge Builder</h1>
+    <button id="return-to-menu-button">Return to Menu</button>
+</header>
+
+<img id="logo" src="static/images/BridgeBuilderLogo.png">
+
+<div id="menu">
+    <button class="menu-button" id="play">Play</button>
+    <button class="menu-button" id="create-account">Create Account</button>
+    <button class="menu-button" id="my-account-button">My Account</button>
+    <button class="menu-button" id="delete-my-account">Delete Account</button>
+</div>
+
+<div id="account-form" class="hidden-form">
+    <input type="text" id="create-username" placeholder="Username">
+    <input type="password" id="create-password" placeholder="Password">
+    <button id="submit-account">Submit</button>
+    <button id="return-to-menu">Return</button>
+</div>
+
+<div id="delete-account-form" class="hidden-form">
+    <input type="text" id="delete-username" placeholder="Username">
+    <input type="password" id="delete-password" placeholder="Password">
+    <button id="delete-account">Delete Account</button>
+    <button id="return-to-menu-delete">Return</button>
+</div>
+
+<div id="update-account-form-username" class="hidden-form">
+    <input type="text" id="update-current-username" placeholder="Username">
+    <input type="text" id="update-new-username" placeholder="New Username">
+    <input type="password" id="update-password-username" placeholder="Password">
+    <p class="form-note">Username can only be changed if the account exists.</p>
+    <button id="update-username-button" class="form-button">Update Username</button>
+    <button id="return-to-menu-update" class="form-button">Return</button>
+</div>
+
+<div id="update-account-form-password" class="hidden-form">
+    <input type="text" id="update-username-password" placeholder="Username">
+    <input type="password" id="update-current-password" placeholder="Password">
+    <input type="password" id="update-new-password" placeholder="New Password">
+    <p class="form-note">Password can only be changed if the account exists.</p>
+    <button id="update-password-button" class="form-button">Update Password</button>
+    <button id="return-to-menu-password" class="form-button">Return</button>
+</div>
+
+<div id="my-account-container" class="hidden-form">
+    <h2>My Account</h2>
+    <input type="text" id="my-username" placeholder="Username">
+    <input type="password" id="my-password" placeholder="Password">
+    <button id="login-button">Login</button>
+    <button id="update-username">Update Username</button>
+    <button id="update-password">Update Password</button>
+    <button id="cancel-button">Cancel</button>
+</div>
+
+<div class="level" id="level1" style="display: none">
+    <div class="platform-container">
+        <div class="platform"></div>
+        <div class="platform"></div>
+        <div class="platform" style="right: 0;"></div>
+    </div>
+    <div class="frame" style="left: 0; top: 260px;"></div>
+    <div class="frame" style="left: 350px; top: 210px;"></div>
+</div>
+
+
+<div id="notification" class="notification"></div>
+
+</body>
+</html>
